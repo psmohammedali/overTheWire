@@ -1,0 +1,30 @@
+nmap simple Scan:
+
+nmap ipaddress
+it takes only 1000 ports,by default it does only tcp ports
+
+port 3389 - default for RDS (Remote Desktop Services)
+
+-sC - more detailed info
+-sV - perfrom version Scan
+-p- - scan all 65535 tcp ports
+
+--------
+
+Banner Grabbing:
+nmap -sV --script=banner target
+
+using netcat
+nc -nv target port
+
+----------
+
+SMB - Server Message Block
+use smbclient for smb works
+
+smbclient -N -L \\\\10.129.42.253
+-N - No password
+-L - List View
+
+smbclient -U bob \\\\10.129.42.253
+-U - getting inside as user called bob

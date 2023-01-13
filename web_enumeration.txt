@@ -1,0 +1,41 @@
+Web Enumeration:
+After discovering a web application, it is always worth checking to see if we can uncover any hidden files or directories on the webserver that are not intended for public access.
+directories Enumeration:
+Tools that can be user are ffuf or GoBuster 
+
+GoBuster for directories enumberation:
+gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt
+
+-u - target 
+-w - wordlist path
+
+-------
+
+GoBuster for dns Enumeration:
+gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt
+
+-d - domain
+
+--------
+
+cURL - essential to view website code in prompt
+curl -i www.google.com
+-i - only header 
+
+
+-----
+
+whatweb (detailed info about the services)
+
+whatweb target
+whatweb target/24
+whatweb --no-errors target/24/30
+
+-----
+
+Its quite to keep robots.txt file in the web servers.
+Reason: whose purpose is to instruct search engine web crawlers such as Googlebot which resources can and cannot be accessed for indexing.
+
+
+
+

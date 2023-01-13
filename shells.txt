@@ -1,0 +1,5 @@
+Shells 
+Three types of Shells:
+Reverse Shell : we open listening port from ourside and target will connected with us.
+Bind Shell: we have listen to the target port and connect to it.
+Web Shell
